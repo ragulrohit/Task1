@@ -1,251 +1,198 @@
-var a = 10;
-a = 20;
-var a = 30;
-console.log(a);
-/* ans = 30 */
+//  Section 1: Printing & User Interaction
+
+// Print your name and designation in the console.
+console.log("Name:Ragul");
+console.log("Designation:Developer")
+
+// show alert message\
+alert("Welcome to JavaScript Session");
+
+// ask the user
+let coding = confirm("Do you like coding")
+console.log("User likes coding :" + coding);
+
+// prompt
+let food = prompt("Enter your favourite food:");
+console.log("Favourite food:" + food);
+
+// document.writeln
+document.writeln("Good Evening Team");
 
 
-var a = 5;
-var a = 15;
-console.log(a);
-/* ans = 15*/
+// Section 2: Console Methods
+
+// Print a number
+console.log(500);
+
+// warning message
+console.warn("This is a warning");
+
+// error message
+console.error( "Something went wrong!");
+
+// Clear the console
+console.clear();
 
 
-var a = 1;
-a = 2;
-a = 3;
-console.log(a);
-/* ans = 3*/
+//  Section 3: Data Types
+
+// variable with your name 
+let myName = "Ragul";
+console.log(typeof myName);
+
+// Store your age 
+let age = 24;
+console.log(typeof age);
+
+// boolean value
+let work = true;
+console.log(work);
+
+//  variable without value
+let x;
+console.log(x);
+
+// null
+let y = null;
+console.log(y);
 
 
-var a = 7;
-a = 14;
-var a = 21;
-a = 28;
-console.log(a); 
-/* ans = 28*/
+//  Section 4: Arrays
+
+// Create an array
+let fruits = ["Apple" , "Mango" , "Guava" , "Banana" , "Pineapple"];
+console.log(fruits);
+
+//  first and last element
+console.log("First:" ,fruits[0]);
+console.log("Last:" ,fruits[fruits.length-1]);
+
+// Add one more fruit 
+fruits.push ("Orange");
+console.log("adding fruit:",fruits);
+
+// Remove the last element
+fruits.pop();
+console.log("removing:" , fruits);
+
+// length of the array
+console.log("length:" , fruits.length);
 
 
-var a = 100;
-var a = 200;
-a = 300;
-console.log(a); 
-/* ans = 300*/
 
 
-var a = 9;
-console.log(a); 
-/* ans = 9 */
+// Section 5: Objects
+
+// Create an object
+let Student = {
+   name: "Ragul" ,
+   age: "24" ,
+   course: "Developer",
+    fruits:["Apple" , "Orange" , "Banana"]
+   
+};
+
+//Print the student name
+console.log("Name:" , Student.name);
+
+// Add a new property 
+Student.college = "Selvamm College";
+console.log("After adding college:" , Student);
+
+// Access nested array
+console.log("First fruit:",
+Student.fruits[1]);
+
+// Update a property value  
+Student.age = 25;
+console.log("Updated Age:" , Student.age);
 
 
-var a = 11;
-a = 22;
-console.log(a); 
-/* ans =22 */
+// Section 6: Operators
+
+let num1 = 20;
+let num2 = 15;
+
+// Add two numbers
+console.log("Add:" , num1 + num2);
+
+// Subtract
+console.log("Sub:" , num1 - num2);
+
+// Multiply
+console.log("Multiply:" , num1 * num2);
+
+// Divide
+console.log("Divide:" , num1 / num2);
+
+// Remainder
+console.log("Remainder:" , num1 % num2);
+
+// exponent operator 
+console.log("Exponent:" , num1 ** num2);
 
 
-var a = 50;
-var a = 60;
-var a = 70;
-console.log(a); 
-/* ans = 70 */
+// Section 7: Increment & Decrement
 
+// post increment
+let a = 5;
+console.log("Post increment:", a++);
+console.log("After increment:" , a);
 
-var a = 2;
-a = 4;
-a = 6;
-var a = 8;
-console.log(a); 
-/* ans = 8 */
-
-
-var a = 99;
-a = 88;
-console.log(a); 
-/* ans = 88*/
-
-/*
-let b = 10;
-b = 20;
-console.log(b); 
-/* ans =20
-
+// pre increment
 let b = 5;
-b = 15;
-b = 25;
-console.log(b); 
-/* ans = 25
+console.log("Pre increment:" , ++a);
+
+//  difference between num++ and ++num
+let X = 5;
+console.log("num++:" , X++);
+console.log("++num:" , ++X);
+
+//  decrement operator
+let Y = 5;
+console.log("Post decrement:" , Y++);
+console.log("After decrement:" , Y);
+
+// Predict output
+let A = 5;
+let B = A++;
+let C = ++A;
+
+console.log("A:" , A);  //7
+console.log("B:" , B);  //5
+console.log("C:" , C);  //7
 
 
-let b = 1;
-console.log(b); 
-/* ans = 1
+//  Section 8: Real-Time Logic Tasks
 
+// user age and check if eligible to vote.
+let Age = prompt("Enter your Age");
+if (Age >= 18){
+    console.log("Eligible to vote");
+}
+else{
+    console.log("Not Eligible");
+}
 
-let b = 7;
-b = 14;
-console.log(b); 
-/* ans = 14 
+// user name and greet
+let User = prompt("Enter your Name");
+console.log("Hello" + User);
 
+// Store marks in array and print highest value
+let marks = [80 , 79 , 45 , 98 ,89];
+let max = Math.max(...marks);
+console.log("Maximum:" , max);
 
-let b = 100;
-b = 200;
-b = 300;
-console.log(b); 
-/* ans = 300
+//  fruits category
+let fruit = {
+    redcolor : ["Apple" , "Strawberry"],
+    yellow : ["Banana"]
+};
+console.log("Category:" , fruit.redcolor);
 
-
-let b = 9;
-let b = 18;
-console.log(b); 
-/ * ans = redecleration error 
-
-
-let b = 50;
-b = 60;
-let b = 70;
-console.log(b); 
-/*ans = redecleration error 
-
-
-
-let b = 2;
-b = 4;
-console.log(b); 
-// ans = 4 
-
-
-let b = 99;
-b = 88;
-b = 77;
-console.log(b); 
-// ans = 77 
-
-
-let b = 11;
-b = 22;
-console.log(b); 
-// ans = 22
-*/
-
-/*
-const c = 10;
-console.log(c); 
-// ans = 10 
-
-
-const c = 5;
-c = 15;
-console.log(c); 
-// type error assigment
-
-
-const c = 1;
-const c = 2;
-console.log(c); 
-// syntax error re- declaration 
-
-
-const c = 7;
-console.log(c); 
-// ans = 7 
-
-
-const c = 100;
-console.log(c); 
-//ans = 100
-
-
-const c = 50;
-c = 60;
-console.log(c); 
-//type error 
-
-
-const c = 9;
-console.log(c); 
-// ans = 9
-
-
-const c = 20;
-const c = 30;
-console.log(c); 
-// syntax error 
-
-
-const c = 99;
-console.log(c); 
-// ans = 99
-
-
-const c = 11;
-c = 22;
-console.log(c); 
-// type error 
-
-*/
-
-
-var a = 1;
-var a = 2;
-var a = 3;
-console.log(a); 
-//ans = 3
-
-
-var a = 10;
-a = 20;
-a = 30;
-var a = 40;
-console.log(a); 
-//ans  = 40
-
-
-var a = 5;
-a = 15;
-console.log(a); 
-// ans = 15
-
-var a = 100;
-var a = 200;
-var a = 300;
-a = 400;
-console.log(a); 
-//ans = 400
-
-
-var a = 7;
-console.log(a); 
-// ans 7
-
-/*
-let b = 3;
-b = 6;
-b = 9;
-console.log(b); 
-// ans =9
-
-
-let b = 12;
-let b = 24;
-console.log(b); 
-// syntax error
-
-
-let b = 8;
-b = 16;
-console.log(b); 
-// ans = 16 
-
-
-const c = 2;
-console.log(c); 
-// ans = 2
-
-
-const c = 4;
-c = 8;
-Console.log(c); 
-// reference error and type error //
-
-*/
+// Combine prompt + array
+let favFruit = [];
+favFruit.push(prompt("Enter Fruit 1:"));
+favFruit.push(prompt("Enter Fruit 2:"));
+favFruit.push(prompt("Enter Fruit 3:"));
+console.log("Your Favourite Fruit:" , favFruit);
